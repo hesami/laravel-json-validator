@@ -57,7 +57,7 @@ Validator::make($request->all(), [
 To check that the input data is a Json string and contains an array containing at least $min objects:
 ```
 Validator::make($request->all(), [
-    'movies' => ['json', 'json_array', "json_array_items_min:$min]
+    'movies' => ['json', 'json_array', "json_array_items_min:$min"]
 ]);
 ```
 
@@ -65,7 +65,7 @@ Validator::make($request->all(), [
 To check that the input data is a Json string and contains an array that has at most :max objects:
 ```
 Validator::make($request->all(), [
-    'movies' => ['json', 'json_array', "json_array_items_max:$max]
+    'movies' => ['json', 'json_array', "json_array_items_max:$max"]
 ]);
 ```
 
