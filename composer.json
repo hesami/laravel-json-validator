@@ -1,0 +1,23 @@
+{
+    "name": "hesami/laravel-json-validator",
+    "description": "A package for validating JSON data in Laravel",
+    "autoload": {
+        "psr-4": {
+            "Hesami\\LaravelJsonValidator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mehdi Hesami",
+            "email": "hesami13@yahoo.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hesami\\LaravelJsonValidator\\JsonValidationServiceProvider"
+            ]
+        }
+    }
+}
