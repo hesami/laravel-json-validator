@@ -1,6 +1,12 @@
 {
     "name": "hesami/laravel-json-validator",
     "description": "A package for validating JSON data in Laravel",
+    "keywords": [
+        "json-validator",
+        "laravel",
+        "validator"
+    ],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Hesami\\LaravelJsonValidator\\": "src/"
