@@ -1,8 +1,15 @@
 # Laravel Json Validator
 A package for validating JSON data in Laravel
 
+# Requirement
+* Laravel 6, 7, 8, 9
+* PHP 7.4 , 8
+
+
 # Installation:
-```composer require hesami/laravel-json-validator```
+```
+composer require hesami/laravel-json-validator
+```
 
 
 # How To use:
@@ -21,7 +28,6 @@ Validator::make($request->all(), [
     'movies' => ['json', 'json_array']
 ]);
 ```
-
 
 
 To check that the input data is a Json string and contains an object that has a key or keys:
@@ -63,3 +69,6 @@ Validator::make($request->all(), [
 ]);
 ```
 
+
+# License
+The MIT license (MIT).
