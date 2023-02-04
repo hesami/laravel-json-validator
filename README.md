@@ -21,6 +21,21 @@ composer require hesami/laravel-json-validator
 
 # How To use:
 
+
+| Rule | Description |
+| --- | --- |
+| `json_object` | To check that the input data is a Json string and contains an object |
+| `json_array` | To check that the input data is a Json string and contains an array |
+| `json_object_has_key` | To check that the input is a Json string and contains an array whose items have a key or keys |
+| `json_array_items_has_key` | To check that the input is a Json string and contains an array whose items have a key or keys |
+| `json_array_items_count` | To check that the input data is a Json string and contains an array that has a certain number (10 or ...) of objects |
+| `json_array_items_min` | To check that the input data is a Json string and contains an array containing at least $min objects |
+| `json_array_items_max` | To check that the input data is a Json string and contains an array that has at most :max objects |
+
+
+
+
+
 To check that the input data is a Json string and contains an object:
 ```php
 Validator::make($request->all(), [
@@ -87,4 +102,4 @@ lng->en->validation.php
 
 
 # License
-The MIT license (MIT).
+The MIT license ([MIT](https://github.com/hesami/laravel-json-validator/blob/master/LICENSE.md)).
