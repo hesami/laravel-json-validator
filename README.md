@@ -22,7 +22,7 @@ composer require hesami/laravel-json-validator
 # How To use:
 
 To check that the input data is a Json string and contains an object:
-```
+```php
 Validator::make($request->all(), [
     'movies' => ['json', 'json_object']
 ]);
@@ -30,7 +30,7 @@ Validator::make($request->all(), [
 
 
 To check that the input data is a Json string and contains an array:
-```
+```php
 Validator::make($request->all(), [
     'movies' => ['json', 'json_array']
 ]);
@@ -38,7 +38,7 @@ Validator::make($request->all(), [
 
 
 To check that the input data is a Json string and contains an object that has a key or keys:
-```
+```php
 Validator::make($request->all(), [
     'movies' => ['json', 'json_object', 'json_object_has_key:title,desc']
 ]);
@@ -46,7 +46,7 @@ Validator::make($request->all(), [
 
 
 To check that the input is a Json string and contains an array whose items have a key or keys:
-```
+```php
 Validator::make($request->all(), [
     'movies' => ['json', 'json_array', 'json_array_items_has_key:title,desc']
 ]);
@@ -54,7 +54,7 @@ Validator::make($request->all(), [
 
 
 To check that the input data is a Json string and contains an array that has a certain number (10 or ...) of objects:
-```
+```php
 Validator::make($request->all(), [
     'movies' => ['json', 'json_array', "json_array_items_count:$count"]
 ]);
@@ -62,7 +62,7 @@ Validator::make($request->all(), [
 
 
 To check that the input data is a Json string and contains an array containing at least $min objects:
-```
+```php
 Validator::make($request->all(), [
     'movies' => ['json', 'json_array', "json_array_items_min:$min"]
 ]);
@@ -70,7 +70,7 @@ Validator::make($request->all(), [
 
 
 To check that the input data is a Json string and contains an array that has at most :max objects:
-```
+```php
 Validator::make($request->all(), [
     'movies' => ['json', 'json_array', "json_array_items_max:$max"]
 ]);
@@ -80,7 +80,7 @@ Validator::make($request->all(), [
 
 # Attention:
 To customize the text of the messages in this version, you need to manually write the message validation language in the file.
-```
+```php
 lng->en->validation.php
 ```
 
