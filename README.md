@@ -70,7 +70,7 @@ Validator::make($request->all(), [
 To check that the input data is a Json string and contains an distinct array:
 ```php
 Validator::make($request->all(), [
-    'movies' => ['json', 'json_array', "json_array_items_distinct:name"]
+    'movies' => ['json', 'json_array', 'json_array_items_has_key:name', "json_array_items_distinct:name"]
 ]);
 ```
 
