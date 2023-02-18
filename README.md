@@ -67,6 +67,13 @@ Validator::make($request->all(), [
 ]);
 ```
 
+To check that the input data is a Json string and contains an distinct array:
+```php
+Validator::make($request->all(), [
+    'movies' => ['json', 'json_array', "json_array_items_distinct:name"]
+]);
+```
+
 
 To check that the input data is a Json string and contains an array that has a certain number (10 or ...) of objects:
 ```php
