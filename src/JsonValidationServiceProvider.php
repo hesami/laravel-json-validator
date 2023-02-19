@@ -65,6 +65,23 @@ class JsonValidationServiceProvider extends ServiceProvider
                 return false;
             }
         });
+        
+       Validator::extend('json_array_items_numeric', function ($attribute, $value, $parameters, $validator) {
+            try {
+                $json = $value;
+                $items = json_decode($json);
+
+                foreach ($items as $item) {
+                    if (is_numeric($item) === false) {
+                        return false;
+                    }
+                }
+
+                return true;
+            } catch (\Throwable $th) {
+                return false;
+            }
+        });
 
         Validator::extend('json_array_items_distinct', function ($attribute, $value, $parameters, $validator) {
             try {
