@@ -28,6 +28,7 @@ composer require hesami/laravel-json-validator
 | `json_array` | To check that the input data is a Json string and contains an array |
 | `json_object_has_key` | To check that the input is a Json string and contains an array whose items have a key or keys |
 | `json_array_items_has_key` | To check that the input is a Json string and contains an array whose items have a key or keys |
+| `json_array_items_numeric` | Checks that the elements of the array are of numeric type. |
 | `json_array_items_distinct` | To check that the input data is a Json string and contains an distinct array |
 | `json_array_items_count` | To check that the input data is a Json string and contains an array that has a certain number (10 or ...) of objects |
 | `json_array_items_min` | To check that the input data is a Json string and contains an array containing at least $min objects |
@@ -65,6 +66,13 @@ To check that the input is a Json string and contains an array whose items have 
 ```php
 Validator::make($request->all(), [
     'movies' => ['json', 'json_array', 'json_array_items_has_key:title,desc']
+]);
+```
+
+Checks that the elements of the array are of numeric type:
+```php
+Validator::make($request->all(), [
+    'movies' => ['json', 'json_array', 'json_array_items_numeric']
 ]);
 ```
 
